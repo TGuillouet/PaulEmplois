@@ -1,7 +1,36 @@
 body{
-    
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
 }
 
 h1{
-    
+text-align: center;
+}
+.box{
+    display: flex;
+}
+aside{
+
+    background-color: blue;
+    width: 300px;
+    min-height: 100vh;
+}
+.cont{
+    background-color: aquamarine;
+    width: 100%;
+    padding: 15px;
+}
+textarea{
+    width: 90%;
+    /*margin: 0 auto;*/
+    padding: 10px;
+}
+
+img{
+    margin: 0 auto;
+    width: 50px;
+    display: block;
+}
+.asid{
+    padding: 10%;
 }
