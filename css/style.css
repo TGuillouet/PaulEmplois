@@ -7,6 +7,12 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+#container_home {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+
 p {
     text-align: center;
     font-size: 25px;
@@ -14,12 +20,13 @@ p {
 
 .description {
     width: 100%;
+    margin-bottom: 0px;
 }
 
 section {
     width: 15%;
     margin-left: 5%;
-    margin-right: 5%; 
+    margin-right: 5%;
 }
 
 img {
@@ -39,10 +46,11 @@ img {
 /* Main screen style */
 .screen {
     position: relative;
-    height: 90vh;
-    margin: 2%;
+    width: 60%;
+    height: 70vh;
+    margin: auto;
     background-color: rgba(211, 211, 211, 0.5);
-    box-shadow: 7px 5px 5px #555252;
+    /*box-shadow: 7px 5px 5px #555252;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -74,8 +82,10 @@ a {
     color: #000000;
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s;
 }
 
 .hlinks:hover {
-    border: 1px solid #000000;
+    /*border: 1px solid #000000;*/
+    transform: scale(1.2);
 }
