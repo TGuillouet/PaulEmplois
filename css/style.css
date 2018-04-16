@@ -1,0 +1,81 @@
+/* Base style */
+body {
+    padding: 0px;
+    margin:0px;
+    background-color: #F7F7F7;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    text-align: center;
+    font-size: 25px;
+}
+
+.description {
+    width: 100%;
+}
+
+section {
+    width: 15%;
+    margin-left: 5%;
+    margin-right: 5%; 
+}
+
+img {
+    width: 100%;
+    padding-top: 20px;
+}
+
+/* Background */
+#bg {
+    position: absolute;
+    width: 115%;
+    height: 500px;
+    background-image: linear-gradient(orange, red);
+    transform: translate(-75px, 100px) rotate(15deg);
+}
+
+/* Main screen style */
+.screen {
+    position: relative;
+    height: 90vh;
+    margin: 2%;
+    background-color: rgba(211, 211, 211, 0.5);
+    box-shadow: 7px 5px 5px #555252;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+}
+
+.screen div {
+    display: flex;
+    justify-content: center;
+}
+
+#cancel {
+    font-size: 15px;
+    width: 5%;
+    position: absolute;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    padding-left: 10px;
+    bottom: 0px;
+    right: 0px;
+    border: 1px solid #8d8787;
+    border-radius: 15px 0px 0px 0px;
+}
+
+/* Links styles */
+a {
+    text-decoration: none;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+}
+
+.hlinks:hover {
+    border: 1px solid #000000;
+}
