@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="css/offre.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    
+
     <title>Deposer une offre</title>
 </head>
 <body>
@@ -23,26 +23,35 @@
 
 <div class="cont">
     <form action="">
-        <div><input name="poste" type="text" placeholder="Intitulé du poste"></div>
+        <div><input class="form" name="poste" type="text" placeholder="Intitulé du poste"></div>
         <div>
-            <select name="contrat" size="3" multiple>
-                <option value="apprentissage">apprentissage</option>
-                <option value="professionnalisation">professionnalisation</option>
-                <option value="Stage">Stage</option>
-            </select>
+            <h2>Type de contrat</h2>
+            <div class="form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">apprentissage</label>
+            </div>
+            <div class="form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">professionnalisation</label>
+            </div>
+            <div class="form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+                    <label class="form-check-label" for="inlineCheckbox3">Stage (disabled)</label>
+            </div>
         </div>
         <div>
-            <textarea name="description" rows="10" cols="100" placeholder="Description du poste"></textarea>
+            <textarea class="form-control " name="description" rows="10" cols="100" placeholder="Description du poste"></textarea>
         </div>
         <div>
-            <textarea name="mission" rows="10" cols="100" placeholder="Mission"></textarea>
+            <textarea class="form-control " name="mission" rows="10" cols="100" placeholder="Mission"></textarea>
         </div>
         <div>
-            <input name="lieu" type="text" placeholder="Lieu">
+            <input class="form" name="lieu" type="text" placeholder="Lieu">
         </div>
         <div>
-            <input name="plus" type="text" placeholder="Les petits plus !">
+            <input class="form" name="plus" type="text" placeholder="Les petits plus !">
         </div>
+        <button class="sumit"> Continuer >></button>
     </form>
 </div>
 </div>
