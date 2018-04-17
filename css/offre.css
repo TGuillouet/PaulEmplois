@@ -106,5 +106,7 @@ img{
         left: 50%;
         transform: translateX(-50%); /* on centre horizontalement  */
         z-index: 1; /* pour s'afficher au dessus des éléments en position relative */
-        white-space: nowrap;  /* on interdit le retour à la ligne */
+        white-space: wrap;  /* on interdit le retour à la ligne */
+        background-color: red;
+        width: 250px;
       }
