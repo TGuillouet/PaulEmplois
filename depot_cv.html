@@ -1,61 +1,92 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="css/offre.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <!--<link rel="stylesheet" href="./plugin/web-fonts-with-css/css/fontawesome.css">-->
+        <link rel="stylesheet" href="css/offre.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <!--<link rel="stylesheet" href="./plugin/web-fonts-with-css/css/fontawesome.css">-->
 
 
-    <title>Deposer un CV</title>
-</head>
-<body>
-    <div class="box">
-    <aside >
-        <div class="asid">
-                <img class="list" src="./img/curriculum.png" alt="">
-                <h1>Deposer un C.V.</h1>
-        </div>
-
-    </aside>
-    
-
-<div class="cont">
-    <form action="">
-        <div><input class="form mBot " name="poste" type="text" placeholder="Intitulé du poste"></div>
-        <div class="mBot">
-            <div class="form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                    <label class="form-check-label" for="inlineCheckbox1">apprentissage</label>
-                    <span class="infobulle" aria-label="Un contrat d'apprentissage désigne un contrat de travail d'un type particulier s'adressant à des personnes désireuses d'entrer en formation professionnelle, celles-ci s'appelant alors apprentis ou apprenti étudiant des métiers. En France, il fait partie des contrats aidés"><i class="fas fa-info-circle"></i></span>
+        <title>Deposer un CV</title>
+    </head>
+    <body>
+        <div class="box">
+        <aside >
+            <div class="asid">
+                    <img class="list" src="./img/curriculum.png" alt="">
+                    <h1>Deposer un C.V.</h1>
             </div>
-            <div class="form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                    <label class="form-check-label" for="inlineCheckbox2">professionnalisation</label>
-                    <span class="infobulle" aria-label="Le contrat de professionnalisation est, en droit français, un contrat de travail remplaçant le contrat de qualification, d'adaptation et d'orientation. Il permet d'accéder à une certification (diplôme, titre, CQP, certification reconnue). Il consiste en l'alternance de périodes d’acquisition de savoir-faire en entreprise et de périodes de formation théorique dispensées en centres de formation ou par l’entreprise elle-même si elle dispose d’un service de formation agréé."><i class="fas fa-info-circle"></i></span>
-            </div>
-            <div class="form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
-                    <label class="form-check-label" for="inlineCheckbox3">Stage</label>
-            </div>
-        </div>
-        <div>
-            <textarea class="form-control mBot" name="description" rows="10" cols="100" placeholder="Lettre de motivation"></textarea>
-        </div>
-        <div>
-            <input class="form mBot" name="lieu" type="text" placeholder="Adresse">
-        </div>
-        <div>
-            <input class="form mBot fab fa-linkedin" name="plus" type="text" placeholder="Linkedin">
-        </div>
-        <button class="sumit"> Deposer >></button>
-    </form>
-</div>
-</div>
-</body>
-<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 
+        </aside>
+        
+
+
+    <div class="cont">
+        <form action="">
+            <div><input class="form mBot " name="poste" type="text" placeholder="Intitulé du poste"></div>
+            <div class="mBot">
+                <div class="form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">apprentissage</label>
+                </div>
+                <div class="form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">professionnalisation</label>
+                </div>
+                <div class="form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+                        <label class="form-check-label" for="inlineCheckbox3">Stage</label>
+                </div>
+            </div>
+            <div>
+                <textarea class="form-control mBot" name="description" rows="10" cols="100" placeholder="Lettre de motivation"></textarea>
+
+            </div>
+            <div>
+                <input class="form mBot" name="lieu" type="text" placeholder="Adresse">
+            </div>
+            <div>
+                <input class="form mBot fab fa-linkedin" name="plus" type="text" placeholder="Linkedin">
+            </div>
+            <input type="file" class="form mBot" id="chooser" onchange="handleFiles(this.files)">
+            <button class="sumit"> Deposer >></button>
+        </form>
+        </div>
+        </div>
+
+
+        <!-- Scripts -->
+        <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+              apiKey: "AIzaSyA6odwHByrJOCfmxvFuwZJ8LfQQ3HsirsI",
+              authDomain: "paulemploi-f88b4.firebaseapp.com",
+              databaseURL: "https://paulemploi-f88b4.firebaseio.com",
+              projectId: "paulemploi-f88b4",
+              storageBucket: "paulemploi-f88b4.appspot.com",
+              messagingSenderId: "625897511543"
+            };
+            firebase.initializeApp(config);
+
+            var storage = firebase.storage();
+            
+            function handleFiles(filesList) {
+                var file = filesList[0];
+                if (RegExp(".\\.pdf").test(file.name)) { // Test if the filename is in .pdf
+                    var uplTask = storage.ref("CV/" + file.name).put(file);
+                    uplTask.on('state_changed', function progress(snapshot) {
+                        console.log(snapshot); // progress of upload
+                    });
+                } else {
+                    alert("Please upload pdf files");
+                }
+            }
+          </script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+    </body>
 </html>
+

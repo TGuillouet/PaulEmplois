@@ -24,7 +24,7 @@ p {
 }
 
 section {
-    width: 15%;
+    /*width: 15%;*/
     margin-left: 5%;
     margin-right: 5%;
 }
@@ -66,14 +66,14 @@ img {
     font-size: 15px;
     width: 5%;
     position: absolute;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     padding-right: 5px;
-    padding-left: 10px;
+    padding-left: 5px;
     bottom: 0px;
     right: 0px;
     border: 1px solid #8d8787;
-    border-radius: 15px 0px 0px 0px;
+    /*border-radius: 15px 0px 0px 0px;*/
 }
 
 /* Links styles */
@@ -88,4 +88,19 @@ a {
 .hlinks:hover {
     /*border: 1px solid #000000;*/
     transform: scale(1.2);
+}
+
+@media screen and (max-width: 480px) {
+    .screen div {
+        flex-direction: column;
+    }
+
+    img {
+        width: 50%;
+        margin: auto;
+    }
+    
+    #bg {
+        width: 170%;
+    }
 }
