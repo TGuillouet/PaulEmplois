@@ -88,4 +88,6 @@ img{
     .mBot{
         margin-bottom: 25px;
     }
-    
+    .lindi{
+        display: flex !important;
+    }
