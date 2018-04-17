@@ -66,14 +66,14 @@ img {
     font-size: 15px;
     width: 5%;
     position: absolute;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     padding-right: 5px;
-    padding-left: 10px;
+    padding-left: 5px;
     bottom: 0px;
     right: 0px;
     border: 1px solid #8d8787;
-    border-radius: 15px 0px 0px 0px;
+    /*border-radius: 15px 0px 0px 0px;*/
 }
 
 /* Links styles */
