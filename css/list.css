@@ -1,0 +1,38 @@
+#marge {
+    float: left;
+    width: 15%;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+    background-color: blue;
+}
+
+.Offre {
+    cursor: pointer;
+    font-weight: 400;
+    height: 6em;
+    line-height: 3.5em;
+    text-align: left;
+    white-space: nowrap;
+    letter-spacing: 0.150em;
+    font-size: 0.725em;
+    border-radius: 4px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+    padding: 0px 40em 0px 45em;
+    text-decoration: none;
+    text-decoration-color: black;
+    position: absolute;
+    margin-left: 5%;
+    transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.Offre:hover{
+    border-color : red;
+}
+
+.link:visited{
+    color: black;
+}
