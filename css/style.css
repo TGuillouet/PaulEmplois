@@ -134,3 +134,6 @@ li a:hover:not(.active) {
 .active {
     background-color: rgb(236, 98, 5);
 }
+nav{
+display : none;
+}
